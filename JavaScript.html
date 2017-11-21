@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Owen Rose's Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  <a href="http://student.fgcu.edu/ojrose8935/">Home Page</a>
+    <h1>JavaScript Examples</h1>
+	<h2>Feel Free to Look Around</h2>
+
+  <h3>Problem 1</h3>
+  
+  <h4>Problem Statement</h4>
+  <p>Write a program that converts Fahrenheit temperatures to Celsius</p>
+  
+  <h4>Plans and pseudocode</h4>
+<p>Ask user for Fahrenheit temp
+Celsius temp = (Fahrenheit temp - 32) * .5556;</p>
+
+  <h4>Solution</h4>
+  <p>var fahrTemp = parseInt(document.getElementById('fTemp').value); 
+var celTemp = (fahrTemp - 32) * .5556;
+document.getElementById("cTemp").innerHTML = "Celsius = " + celTemp;</p>
+
+<h4>Example</h4> 
+<h4>Temp Conveter</h4>
+<form id="frm1" action="/action_page.php">
+  F temperature: <input type="text" name="fTemp" value="50"><br>
+</form>
+ 
+<p id="demo"></p>
+ 
+<button onclick="myFunction()">Convert</button>
+ 
+<p id="demo"></p>
+ 
+<script>
+function myFunction() {
+    var x = document.getElementById("frm1");
+   
+    var fahrTemp = x.elements[0].value;
+   
+    var celTemp = (fahrTemp - 32) * .5556;
+   
+    document.getElementById("demo").innerHTML = "Celsius = " + celTemp;
+}
+</script>
+  <h3>Problem 2</h3>
+  <h4>Problem Statement</h4>
+  <p>Write a program that calcualtes the time need to level up with a fixed XP range.</p>
+  
+  <h4>Plans and pseudocode</h4>
+<p>Ask user for level they wish to grind too.
+    var totalTime = level + (level * 30);</p>
+
+  <h4>Solution</h4>
+  <p>function grindTimeCalc1(){
+            var level =  parseInt(document.getElementById('levelInput1').value);
+			
+            var totalTime = level + (level * 30);
+			
+            document.getElementById("time1").innerHTML = "Total Time = " + totalTime + " minutes.";
+        }</p>
+
+<h4>Example</h4> 
+
+    <h3>Calculate Total Grind Time with Fixed XP Range</h3>
+	
+    <p>1 level every 30 minutes</p>
+	
+    Grind Time: <input type="text" id="levelInput1" value="50"><br>
+    <button onclick="grindTimeCalc1()">Calculate Grind Time</button>
+    <p id="time1"></p>
+    
+    <script> 
+        function grindTimeCalc1(){
+            var level =  parseInt(document.getElementById('levelInput1').value);
+			
+            var totalTime = level + (level * 30);
+			
+            document.getElementById("time1").innerHTML = "Total Time = " + totalTime + " minutes.";
+        }
+    </script>
+     
+<h3>Problem 3</h3>
+  <h4>Problem Statement</h4>
+	<p>Write a program that calcualtes the total grind time a moveable XP per level and number of companions</p>
+  
+  <h4>Plans and pseudocode</h4>
+    <p>Ask user for Level, XP per Level, and number of Companions.
+	totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2))</p>
+	
+  <h4>Solution</h4>
+    <p>function grindTimeCalc2() {
+            var level = parseInt(document.getElementById('levelInput2').value);
+			
+            var levelXp = parseInt(document.getElementById('levelXpInput').value);
+			
+            var companion = parseInt(document.getElementById('companionInput').value);
+			
+            var totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2));
+			
+            document.getElementById("time2").innerHTML = "Total Time = " + totalTime + " minutes.";
+        }</p>
+  
+    <h3>Example</h3>
+	<h4>Calculate Total Grind Time with Variable XP per Level and Companions</h4>
+    Level to Achive: <input type="text" id="levelInput2" value="5"><br>
+    XP per Level: <input type="text" id="levelXpInput" value="50"><br>
+    Number of Companions: <input type="text" id="companionInput" value="1"><br>
+    <button onclick="grindTimeCalc2()">Calculate Grind Time</button>
+    <p id="time2"></p>
+    
+    <script> 
+        function grindTimeCalc2() {
+            var level = parseInt(document.getElementById('levelInput2').value);
+			
+            var levelXp = parseInt(document.getElementById('levelXpInput').value);
+			
+            var companion = parseInt(document.getElementById('companionInput').value);
+			
+            var totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2));
+			
+            document.getElementById("time2").innerHTML = "Total Time = " + totalTime + " minutes.";
+        }
+    </script>
+  
+  
+  </body>  
+</html>  
+
