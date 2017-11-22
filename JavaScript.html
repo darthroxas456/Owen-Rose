@@ -19,33 +19,23 @@
 Celsius temp = (Fahrenheit temp - 32) * .5556;</p>
 
   <h4>Solution</h4>
-  <p>var fahrTemp = parseInt(document.getElementById('fTemp').value); 
-var celTemp = (fahrTemp - 32) * .5556;
-document.getElementById("cTemp").innerHTML = "Celsius = " + celTemp;</p>
+  <p>var text = ""; var i; for (i = 0; i < 10; i++) {text += "The number is " + i + "<br>";}
+document.getElementById("Numbers").innerHTML = text;</p>
 
 <h4>Example</h4> 
-<h4>Temp Conveter</h4>
-<form id="frm1" action="/action_page.php">
-  F temperature: <input type="text" name="fTemp" value="50"><br>
-</form>
- 
-<p id="demo"></p>
- 
-<button onclick="myFunction()">Convert</button>
- 
-<p id="demo"></p>
- 
+<h4>Number Loops</h4>
+
+<p id="Numbers"></p>
+
 <script>
-function myFunction() {
-    var x = document.getElementById("frm1");
-   
-    var fahrTemp = x.elements[0].value;
-   
-    var celTemp = (fahrTemp - 32) * .5556;
-   
-    document.getElementById("demo").innerHTML = "Celsius = " + celTemp;
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    text += "The number is " + i + "<br>";
 }
+document.getElementById("Numbers").innerHTML = text;
 </script>
+	  
   <h3>Problem 2</h3>
   <h4>Problem Statement</h4>
   <p>Write a program that calcualtes the time need to level up with a fixed XP range.</p>
