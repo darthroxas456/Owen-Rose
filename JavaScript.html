@@ -76,46 +76,49 @@ document.getElementById("Numbers").innerHTML = text;
      
 <h3>Problem 3</h3>
   <h4>Problem Statement</h4>
-	<p>Write a program that calcualtes the total grind time a moveable XP per level and number of companions</p>
+	<p>Write a program that calcualtes if the user is old enough to drink.</p>
   
   <h4>Plans and pseudocode</h4>
-    <p>Ask user for Level, XP per Level, and number of Companions.
-	totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2))</p>
+    <p>Ask user for Age.
+	 age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        drink = "Input is not a number";
+    } else {
+        drink = (age < 21) ? "Too young" : "Old enough";
+    }
+    document.getElementById("drink").innerHTML = drink;
+}</p>
 	
   <h4>Solution</h4>
-    <p>function grindTimeCalc2() {
-            var level = parseInt(document.getElementById('levelInput2').value);
-			
-            var levelXp = parseInt(document.getElementById('levelXpInput').value);
-			
-            var companion = parseInt(document.getElementById('companionInput').value);
-			
-            var totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2));
-			
-            document.getElementById("time2").innerHTML = "Total Time = " + totalTime + " minutes.";
-        }</p>
+    <p>function myFunction() {
+    var age, drink;
+    age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        drink = "Input is not a number";
+    } else {
+        drink = (age < 21) ? "Too young" : "Old enough";
+    }
+    document.getElementById("drink").innerHTML = drink;
+}</p>
   
     <h3>Example</h3>
-	<h4>Calculate Total Grind Time with Variable XP per Level and Companions</h4>
-    Level to Achive: <input type="text" id="levelInput2" value="5"><br>
-    XP per Level: <input type="text" id="levelXpInput" value="50"><br>
-    Number of Companions: <input type="text" id="companionInput" value="1"><br>
-    <button onclick="grindTimeCalc2()">Calculate Grind Time</button>
-    <p id="time2"></p>
-    
-    <script> 
-        function grindTimeCalc2() {
-            var level = parseInt(document.getElementById('levelInput2').value);
-			
-            var levelXp = parseInt(document.getElementById('levelXpInput').value);
-			
-            var companion = parseInt(document.getElementById('companionInput').value);
-			
-            var totalTime = level + (level * (levelXp / 50.0)) + (level + (companion * 2));
-			
-            document.getElementById("time2").innerHTML = "Total Time = " + totalTime + " minutes.";
-        }
-    </script>
+	<h4>Calculate if You Are Able to Drink</h4>
+    Age You Are: <input id="age" value="20" />
+<button onclick="myFunction()">drink</button>
+<p id="drink"></p>
+
+<script>
+function myFunction() {
+    var age, drink;
+    age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        drink = "Input is not a number";
+    } else {
+        drink = (age < 21) ? "Too young" : "Old enough";
+    }
+    document.getElementById("drink").innerHTML = drink;
+}
+</script>
   
   
   </body>  
