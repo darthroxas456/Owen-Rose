@@ -120,8 +120,34 @@ function myFunction() {
     document.getElementById("drink").innerHTML = drink;
 }
 </script>
+	  <p></p>
+<h4>Cipher Example</h4>
+
+	  
+	 <p>Use the cipher to encode HELLO WORLD</p>
+<p id="cipher"></p>
+
+<script>
+function cipher() {
+    
+  var stringToEncode = "HELLO WORLD"
   
+  var unicode;
+  var shiftedUnicode;
+  var encodedText = "";
+	  
+  for (var index = 0; index < stringToEncode.length; index++) {
+    unicode = stringToEncode.charCodeAt(index);
+  	shiftedUnicode = unicode + 3;
+  	encodedText += String.fromCharCode(shiftedUnicode);
+  } 	 
   
+  document.getElementById("cipher").innerHTML = encodedText;
+	   
+}
+</script>
+
+<button onclick="cipher()">Click Me!</button>
   </body>  
 </html>  
 
