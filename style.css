@@ -29,5 +29,10 @@ h4{
 p{
 	text-indent: 50px;
 	text-align: center;
-}	
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
 
